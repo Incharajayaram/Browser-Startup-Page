@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Search Engine Homepage</title>
+    <link rel="stylesheet" href="syles for brower.css">
+    <script src="IMP.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body{
+        cursor: none;
+        }
+    </style> 
+ </head>
+ <body>
+   <div class="circle-cursor"></div>
+   <header>
+        <div class="hello">
+            
+            <span>
+            <a href="https://www.bing.com/chat?form=NTPCHB"><button id = "wi"><img src="./download-removebg-preview-removebg-preview-removebg-preview.png"></button></a>
+            </span>
+        </div>
+   <div class="menu">
+    <div class="dots-container">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+    <ul>
+        <li><a href="https://www.bing.com">New tab</a></li>
+        <li><a href="https://www.bing.com" onclick="window.open(this.href,'newwindow','width=1000,height=800'); return false;">New window</a></li>
+        <li><a href="#" onclick="simulateKeyPress()">Downloads</a></li>
+        <li><a href="edge://extensions/">Extensions</a></li>
+        <li><a href="ms-edge://history/all">History</a></li>
+        <li><a href="ms-edge://settings/">Settings</a></li>
+        <li><a href="https://go.microsoft.com/fwlink/?linkid=2080734">Help and feedback</a></li>
+    </ul>
+</div> 
+</header>
+   <center> 
+        <font face="Comic sans MS"><h1><W>Welcome</W> <T> To</T> <E>E</E><D>D</D><G>G</G><EV>E</EV> <A>Achinthya</A>
+        </font>
+         <pre>
+         </pre>
+         <div class="search-container">
+        <form action="https://www.youtube.com/search" method="GET">
+            
+            <input type="text" class="search-box" name="q" placeholder="Search Youtube...">
+            <button type="submit" class="search-button"><i class="fas fa-search icon"></i></button>
+        </form>
+        <p>
+        </p>
+        <form action="https://www.google.com/search" method="GET">
+            
+            <input type="text" class="search-box" name="q" placeholder="Search Google...">
+            <button type="submit" class="search-button"><i class="fas fa-search icon"></i></button>
+        </form>
+        <p>
+        </p>
+        <form action="https://www.bing.com/search" method="GET">
+            
+            <input type="text" class="search-box" name="q" placeholder="Search Bing...">
+            <button type="submit" class="search-button"><i class="fas fa-search icon"></i></button>
+        </form>
+        <p>
+        </p>
+        <input type="text" id="searchInput"class="search-box" placeholder="Type website name">
+        <button id="searchButton" class="search-button">Go</button>
+
+        <div id="shortcuts">
+         <a href="https://www.google.com" target="_blank">
+          <button class="shortcut" style="background-image: url('./h.png')"></button>
+         </a>
+
+<a href="https://www.youtube.com" target="_blank">
+    <button class="shortcut" style="background-image: url('./t.png')"></button>
+</a>
+
+<a href="https://stackoverflow.com" target="_blank">
+    <button class="shortcut" style="background-image: url('https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196')"></button>
+</a>
+
+<a href="https://twitter.com" target="_blank">
+    <button class="shortcut" style="background-image: url('./th-removebg-preview (3).png')"></button>
+</a>
+
+ <button onclick="openVSCode()" class="shortcut" style="background-image: url('./th-removebg-preview (1).png')"></button>
+<a href="https://chat.openai.com" target="_blank">
+    <button class="shortcut" style="background-image: url('./th-removebg-preview (2).png')"></button>
+</a>       
+        </div>
+
+
+
+
+<script>
+   
+   function simulateKeyPress() {
+    // Create a new KeyboardEvent for Ctrl key with 'keydown' type
+    var ctrlEvent = new KeyboardEvent('keydown', {
+        key: 'Control', // specify the key
+        keyCode: 17, // specify the keyCode
+        which: 17, // specify the 'which' property
+        code: 'Control', // specify the code
+        ctrlKey: true, // specify that Ctrl key is pressed
+        bubbles: true // allow the event to bubble up through the DOM
+    });
+
+    // Dispatch the Ctrl key event on the document
+    document.dispatchEvent(ctrlEvent);
+
+    // Create a new KeyboardEvent for J key with 'keydown' type
+    var jEvent = new KeyboardEvent('keydown', {
+        key: 'j', // specify the key
+        keyCode: 74, // specify the keyCode
+        which: 74, // specify the 'which' property
+        code: 'KeyJ', // specify the code
+        ctrlKey: true, // specify that Ctrl key is pressed
+        bubbles: true // allow the event to bubble up through the DOM
+    });
+
+    // Dispatch the J key event on the document
+    document.dispatchEvent(jEvent);
+}
+   document.getElementById("searchButton").addEventListener("click", function() {
+        var inputText = document.getElementById("searchInput").value;
+        if (inputText.trim() !== "") {
+            var websiteURL = getWebsiteURL(inputText);
+            if (websiteURL !== "") {
+                window.open(websiteURL, "_blank");
+            } else {
+                alert("Website not found!");
+            }
+        } else {
+            alert("Please enter a website name!");
+        }
+    });
+
+    function getWebsiteURL(websiteName) {
+        // You can add more websites to the list
+        var websites = {
+            "google": "https://www.google.com",
+            "youtube": "https://www.youtube.com",
+            "stackoverflow": "https://stackoverflow.com",
+            "chatgpt": "https://chat.openai.com",
+            "github":"https://github.com/",
+            "twitter":"https://twitter.com/",
+            "facebook":"https://www.facebook.com/",
+            "linkedin":"https://www.linkedin.com/",
+            "instagram":"https://www.instagram.com/",
+            "reddit":"https://www.reddit.com/",
+            "twitch":"https://www.twitch.tv/" ,
+            "netflix":"https://www.netflix.com/" , 
+            "spotify":"https://www.spotify.com",
+            "bilibili": "https://www.bilibili.tv",
+            "imdb":"http://www.imdb.com/",
+            "wikipedia":"https://en.wikipedia.org/wiki/Main_Page",
+            "tiktok": "https://www.tiktok.com",
+            "bing": "https://www.bing.com/",
+            "microsoft rewards": "https://rewards.bing.com",
+            "discord": "https://discord.com",
+            "roblox": "https://www.roblox.com",
+            "w3schools": "https://www.w3schools.com",
+            "codechef": "https://www.codechef.com",
+            "hackerrank": "https://www.hackerrank.com",
+            "leetcode": "https://leetcode.com",
+            "udemy": "https://www.udemy.com",
+            "coursera": "https://www.coursera.org",
+            "ij studio":"D:/website/Inchara%20Jayaram's%20Studio%20after%20login%20.html",
+            
+
+
+            };
+        var lowerCaseName = websiteName.toLowerCase();
+        return websites[lowerCaseName] || "";
+    }
+    function openVSCode() {
+      window.location.href = 'vscode://';
+    }
+</script>
+    </div>
+    </center>
+   
+  
+ </body>
+</html>

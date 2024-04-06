@@ -1,0 +1,222 @@
+html{
+    cursor: none;
+    background-image: url("./bg img .jpg") 
+}
+h1{
+    text-align: 200px left 300px right;
+    
+}
+/* Add your CSS styles here */
+W {
+  color: aqua;
+}
+T{
+    color:crimson;
+}
+E{
+  color: red ;
+}
+D{
+    color: green;
+}
+G{
+    color: blueviolet;
+}
+EV{
+    color: orange;
+}
+
+A{
+    color:  darkorchid;
+}
+
+
+body {
+    cursor: none;
+    font-family: Arial, sans-serif;
+    margin:  5% auto;
+    padding: 0;
+    
+   
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hide scrollbars */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    cursor: none; /* Hide the default cursor */
+  }
+
+.circle-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border:3px solid silver;   
+    background-color: transparent; /* Change the background color to your desired color */
+    position: fixed;
+    pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  /* Optional: Change cursor color on hover */
+  
+  header {
+    background-color: rgb(128, 128, 128, 50%);
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: none;
+  }
+
+  #wi{
+    background-color: transparent;
+    border: none;
+    cursor: none;
+  }
+  
+.search-container {
+    cursor: none;   
+    text-align: center;
+    
+}
+       
+
+
+.search-box {
+    width: 400px;
+    padding: 10px;
+    border: 2px rgb(63, 16, 16);
+    border-radius: 25px;
+    font-size: 16px;
+    outline:invert; 
+    cursor: none;
+    background-color: rgb(210, 105, 30, 50%);
+    color: #fff;
+}
+.search-box::placeholder {
+    color: white;
+}
+
+.search-box:hover {
+    background-color: rgb(63, 16, 16, 70%);
+}
+
+.search-button {
+    background-color: rgb(210, 105, 30);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: none;
+    margin-left: 10px;
+    transition: background-color 0.3s ease; /* Add transition for smoother hover effect */
+}
+
+.search-button:hover {
+    background-color: rgb(63, 16, 16); /* Darker shade of blue on hover */
+}
+
+#shortcuts {
+    margin-top: 20px;
+    cursor: none;
+}
+.shortcut {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-size: cover;
+    cursor: none;
+    background-color: rgb(0, 0, 0, 50%);
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+.shortcut:hover {
+    background-color: rgb(36, 33, 33, 50%);
+    cursor: none;
+    
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    top: 100%;
+}
+
+.menu:hover{
+    background-color: #333;
+}
+
+/* Styling the menu items */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none; /* Initially hidden */
+    z-index: 1;
+}
+
+.menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Show menu items when menu is hovered */
+.menu:hover ul {
+    display: block;
+    
+}
+
+/* Styling links */
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Add a bit of transition effect for smooth appearance */
+.menu ul {
+    transition: all 0.3s ease;
+}
+
+/* Styling the three dots */
+.dots-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.dots-container .dot {
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+}
